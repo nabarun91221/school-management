@@ -1,0 +1,593 @@
+{
+  "info": {
+    "_postman_id": "20e999c1-c7e6-46d4-b36b-c986168f4f49",
+    "name": "school management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16143527"
+  },
+  "item": [
+    {
+      "name": "schools",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7777/api/v1/schools?longitude=88.303748&latitude=22.618595",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7777",
+          "path": [
+            "api",
+            "v1",
+            "schools"
+          ],
+          "query": [
+            {
+              "key": "longitude",
+              "value": "88.303748",
+              "type": "text"
+            },
+            {
+              "key": "latitude",
+              "value": "22.618595",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "schools",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7777/api/v1/schools?longitude=88.303748&latitude=22.618595",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7777",
+              "path": [
+                "api",
+                "v1",
+                "schools"
+              ],
+              "query": [
+                {
+                  "key": "longitude",
+                  "value": "88.303748"
+                },
+                {
+                  "key": "latitude",
+                  "value": "22.618595"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "257"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"101-8t9hF5dDn2TWKL9rOW8wiy3NziI\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Apr 2026 09:57:47 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Schools sorted by distance\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"The Heritage Academy\",\n            \"address\": \"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n            \"latitude\": 22.5165,\n            \"longitude\": 88.4185,\n            \"distance\": 16.359726476532686\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "school",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7777/api/v1/schools/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7777",
+          "path": [
+            "api",
+            "v1",
+            "schools",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "school",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7777/api/v1/schools/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7777",
+              "path": [
+                "api",
+                "v1",
+                "schools",
+                "3"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "61"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3d-4f8/XHaLFCmOW8OmyldL8534z3E\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Apr 2026 09:35:09 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"School with the id: 3 not found\"\n}"
+        },
+        {
+          "name": "school",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7777/api/v1/schools/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7777",
+              "path": [
+                "api",
+                "v1",
+                "schools",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "226"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e2-8DW2qI2ja2cUwPifjEVC2Q0P1eI\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Apr 2026 09:40:59 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"School fetched successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"The Heritage Academy\",\n        \"address\": \"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n        \"latitude\": 22.5165,\n        \"longitude\": 88.4185\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "school",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"The Heritage Academy\",\n    \"address\":\"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n    \"latitude\":22.51653056462674,\n    \"longitude\":88.41850495476174\n\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7777/api/v1/schools",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7777",
+          "path": [
+            "api",
+            "v1",
+            "schools"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "school",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"The Heritage Academy\",\n    \"address\":\"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n    \"latitude\":22.51653056462674,\n    \"longitude\":88.41850495476174\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:7777/api/v1/schools",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7777",
+              "path": [
+                "api",
+                "v1",
+                "schools"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "233"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e9-XHzdmn/li5iJXBzAIy4/PhCW2Ng\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Apr 2026 09:40:19 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\n    \"success\": true,\n    \"message\": \"School created\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"The Heritage Academy\",\n        \"address\": \"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n        \"latitude\": 22.51653056462674,\n        \"longitude\": 88.41850495476174\n    }\n}"
+        },
+        {
+          "name": "school",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"The Heritage Academy\",\n    \"address\":\"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n    \"latitude\":22.51653056462674\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:7777/api/v1/schools",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7777",
+              "path": [
+                "api",
+                "v1",
+                "schools"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "87"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"57-N2EpeFMhk4m1yX5sjohkoxjt2ZA\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Apr 2026 09:58:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"type\": \"DTO Validation Error\",\n    \"message\": [\n        \"\\\"longitude\\\" is required\"\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "school",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"The heritage academy of sceince\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7777/api/v1/schools/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7777",
+          "path": [
+            "api",
+            "v1",
+            "schools",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "school",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"The heritage academy of sceince\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:7777/api/v1/schools/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7777",
+              "path": [
+                "api",
+                "v1",
+                "schools",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "224"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e0-pfpDhROKZIWsl6f0+ehZW1/hB5g\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Apr 2026 09:43:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"School updated\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"The heritage academy of sceince\",\n        \"address\": \"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n        \"latitude\": 22.5165,\n        \"longitude\": 88.4185\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "school",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"The heritage academy of sceince\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7777/api/v1/schools/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7777",
+          "path": [
+            "api",
+            "v1",
+            "schools",
+            "3"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "school",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"The heritage academy of sceince\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7777/api/v1/schools/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7777",
+              "path": [
+                "api",
+                "v1",
+                "schools",
+                "3"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "226"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e2-V6B/quswCqxNgcqdL3LdlVz9kf4\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Apr 2026 09:45:28 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"School deleted successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"The Heritage Academy\",\n        \"address\": \"West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West Bengal 700107\",\n        \"latitude\": 22.5165,\n        \"longitude\": 88.4185\n    }\n}"
+        }
+      ]
+    }
+  ]
+}

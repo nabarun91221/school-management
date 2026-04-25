@@ -1,0 +1,258 @@
+openapi: 3.0.0
+info:
+  title: school management
+  version: 1.0.0
+  description: ''
+servers:
+  - url: http://localhost:7777
+paths:
+  /api/v1/schools:
+    get:
+      summary: schools
+      parameters:
+        - name: longitude
+          in: query
+          schema:
+            type: number
+          example: 88.303748
+        - name: latitude
+          in: query
+          schema:
+            type: number
+          example: 22.618595
+      responses:
+        '200':
+          description: schools
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Length:
+              schema:
+                type: integer
+              example: 257
+            ETag:
+              schema:
+                type: string
+              example: W/"101-8t9hF5dDn2TWKL9rOW8wiy3NziI"
+            Date:
+              schema:
+                type: string
+              example: Sat, 25 Apr 2026 09:57:47 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+    post:
+      summary: school
+      responses:
+        '201':
+          description: school
+          headers:
+            X-Powered-By:
+              deprecated: false
+              schema: {}
+              example: Express
+            Content-Length:
+              deprecated: false
+              schema: {}
+              example: '233'
+            ETag:
+              deprecated: false
+              schema: {}
+              example: W/"e9-XHzdmn/li5iJXBzAIy4/PhCW2Ng"
+            Date:
+              deprecated: false
+              schema: {}
+              example: Sat, 25 Apr 2026 09:40:19 GMT
+            Connection:
+              deprecated: false
+              schema: {}
+              example: keep-alive
+            Keep-Alive:
+              deprecated: false
+              schema: {}
+              example: timeout=5
+        '400':
+          description: school
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Length:
+              schema:
+                type: integer
+              example: 87
+            ETag:
+              schema:
+                type: string
+              example: W/"57-N2EpeFMhk4m1yX5sjohkoxjt2ZA"
+            Date:
+              schema:
+                type: string
+              example: Sat, 25 Apr 2026 09:58:56 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                address:
+                  type: string
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+            example:
+              name: The Heritage Academy
+              address: >-
+                West Chowbaga Rd, Mundapara, Chak Kolarkhal, Kolkata, West
+                Bengal 700107
+              latitude: 22.51653056462674
+              longitude: 88.41850495476174
+  /api/v1/schools/1:
+    get:
+      summary: school
+      responses:
+        '200':
+          description: school
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Length:
+              schema:
+                type: integer
+              example: 226
+            ETag:
+              schema:
+                type: string
+              example: W/"e2-8DW2qI2ja2cUwPifjEVC2Q0P1eI"
+            Date:
+              schema:
+                type: string
+              example: Sat, 25 Apr 2026 09:40:59 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+        '404':
+          description: school
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Length:
+              schema:
+                type: integer
+              example: 61
+            ETag:
+              schema:
+                type: string
+              example: W/"3d-4f8/XHaLFCmOW8OmyldL8534z3E"
+            Date:
+              schema:
+                type: string
+              example: Sat, 25 Apr 2026 09:35:09 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+  /api/v1/schools/2:
+    put:
+      summary: school
+      responses:
+        '200':
+          description: school
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Length:
+              schema:
+                type: integer
+              example: 224
+            ETag:
+              schema:
+                type: string
+              example: W/"e0-pfpDhROKZIWsl6f0+ehZW1/hB5g"
+            Date:
+              schema:
+                type: string
+              example: Sat, 25 Apr 2026 09:43:00 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+            example:
+              name: The heritage academy of sceince
+  /api/v1/schools/3:
+    delete:
+      summary: school
+      responses:
+        '200':
+          description: school
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Length:
+              schema:
+                type: integer
+              example: 226
+            ETag:
+              schema:
+                type: string
+              example: W/"e2-V6B/quswCqxNgcqdL3LdlVz9kf4"
+            Date:
+              schema:
+                type: string
+              example: Sat, 25 Apr 2026 09:45:28 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
